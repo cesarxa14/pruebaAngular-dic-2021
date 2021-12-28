@@ -1,0 +1,40 @@
+<ngb-carousel [interval]="5000" [pauseOnHover]="true">
+    <ng-template ngbSlide>
+      <div class="picsum-img-wrapper" style="display: flex; justify-content: center;">
+        <img style="height: 350px; width: 500px;" src="../../../assets/asesoria.jpg" alt="Random slide">
+      </div>
+      <div>
+        <h1>Asesoria Personalizada</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem deserunt quas cumque corporis officiis tenetur aperiam consequatur harum incidunt vitae excepturi ab, aliquam quibusdam laboriosam non perspiciatis id doloremque quo.</p>
+      </div>
+    </ng-template>
+
+    <ng-template ngbSlide>
+        <div class="picsum-img-wrapper" style="display: flex; justify-content: center;">
+          <img style="height: 350px; width: 500px;" src="../../../assets/seguro.jpg" alt="Random slide">
+        </div>
+        <div >
+          <h1>Revisa tus seguros</h1>
+          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est dolor similique mollitia inventore iure sequi, magnam illum architecto minus culpa placeat iste distinctio ipsam, sint natus eaque! Tempora, harum ullam?</p>
+        </div>
+      </ng-template>
+
+      <ng-template ngbSlide>
+        <div class="picsum-img-wrapper" style="display: flex; justify-content: center;">
+          <img style="height: 350px; width: 500px;" src="../../../assets/oferta.jpg" alt="Random slide">
+        </div>
+        <div >
+          <h1>Recibe ofertas</h1>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam voluptatibus hic, voluptates sint ex nostrum odit voluptatem quidem aut officiis rem quaerat error, quisquam necessitatibus corporis assumenda aliquid qui dolores.</p>
+        </div>
+      </ng-template>
+  </ngb-carousel>
+  
+  <hr>
+
+  <button (click)="close()">Cerrar</button>
+  
+  <!-- <div class="btn-group" role="group" aria-label="Carousel toggle controls">
+    <button type="button" (click)="showNavigationArrows = !showNavigationArrows" class="btn btn-outline-dark btn-sm">Toggle navigation arrows</button>
+    <button type="button" (click)="showNavigationIndicators = !showNavigationIndicators" class="btn btn-outline-dark btn-sm">Toggle navigation indicators</button>
+  </div> -->

@@ -5,6 +5,9 @@ import { RegisterComponent } from './register/register.component';
 import { RouterModule } from '@angular/router';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
+import { MatFormFieldModule } from '@angular/material/form-field';
+
+import { MaterialModules } from '../material.module';
 
 
 
@@ -22,7 +25,9 @@ import {HttpClientModule} from '@angular/common/http';
     RouterModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    MatFormFieldModule,
+    MaterialModules
   ]
 })
 export class AuthModule { }

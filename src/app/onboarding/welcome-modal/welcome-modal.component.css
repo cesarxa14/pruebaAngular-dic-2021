@@ -1,0 +1,15 @@
+.img{
+    /* border: 2px solid red; */
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+
+.text{
+    /* display: grid;
+    grid-template-rows: 1fr 1fr 1fr; */
+    /* justify-content: center; */
+    text-align: center;
+    /* border: 2px solid green; */
+}

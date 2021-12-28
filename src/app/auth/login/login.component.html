@@ -1,11 +1,26 @@
 <body class="text-center">
 
   <main class="form-signin">
-    <form>
+    <form [formGroup]="loginForm">
       <img class="mb-3" src="" alt="" width="270" height="72">
-      <h1 class="h3 mb-3 fw-normal">Inicia sección </h1>
+      <h1 class="h3 mb-3 fw-normal">Iniciar sesion </h1>
 
-      <div class="form-floating">
+      <mat-form-field appearance="fill">
+        <mat-label>Usuario</mat-label>
+        <input matInput placeholder="Ingresa tu nombre de usuario" formControlName="username">
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+          <mat-label>Contraseña</mat-label>
+          <input type="password" matInput placeholder="Ingresa tu contraseña" formControlName="password">
+          <mat-error *ngIf="password.hasError('minlength')">Mínimo 6 caracteres</mat-error>
+      </mat-form-field>
+
+      <button (click)="login()" class="button-login" mat-raised-button color="primary" [disabled]="!loginForm.valid">
+          INGRESAR
+      </button>
+
+      <!-- <div class="form-floating">
         <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
         <label for="floatingInput">Correo</label>
       </div>
@@ -18,8 +33,8 @@
         <label>
           <input type="checkbox" value="remember-me"> Recuerdame
         </label>
-      </div>
-      <button style="background-color: #FF5A7C;border: #FF5A7C;" class="w-100 btn btn-lg btn-primary" type="submit">Sign in</button>
+      </div> -->
+      <!-- <button style="background-color: #FF5A7C;border: #FF5A7C;" class="w-100 btn btn-lg btn-primary" type="submit">Sign in</button> -->
       <p class="mt-5 mb-3 text-muted">&copy; 2021</p>
     </form>
   </main>
