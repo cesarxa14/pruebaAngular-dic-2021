@@ -51,6 +51,10 @@ mat-form-field{
   margin-right: 10px;
 }
 
+.form-signin{
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
 @media (min-width: 768px) {
   .bd-placeholder-img-lg {
     font-size: 3.5rem;

@@ -14,13 +14,13 @@ import { FeaturesModalComponent} from '../onboarding/features-modal/features-mod
 export class PagesComponent implements OnInit {
 
   accessBy:any;
+  newuser:any;
   constructor(
     private route: ActivatedRoute,
     public dialog: MatDialog
     ){ 
-    this.route.paramMap.subscribe( params => {
-      this.accessBy = params.get('accessBy') 
-    });
+    this.accessBy = localStorage.getItem('accessBy');
+    this.newuser = localStorage.getItem('newuser');
   }
 
   ngOnInit(): void {
@@ -31,7 +31,7 @@ export class PagesComponent implements OnInit {
   }
 
   openWelcomeModal(){
-    if(this.accessBy == 'register'){
+    if(this.accessBy == 'register' && this.newuser == 'true'){
       console.log('entró!')
       const dialogRef = this.dialog.open(WelcomeModalComponent, {
         width: '800px',
@@ -47,6 +47,8 @@ export class PagesComponent implements OnInit {
 
         dialogRef2.componentInstance.exit.subscribe((res:null) =>{
           dialogRef2.close();
+          localStorage.removeItem('newuser');
+          localStorage.setItem('newuser', 'false');
         })
         dialogRef.close();
       })

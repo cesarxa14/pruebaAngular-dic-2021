@@ -2,21 +2,14 @@
 
   <main class="form-signin">
     <form [formGroup]="registerForm">
-      <img class="mb-3" src="" alt="" width="270" height="72">
+      <img class="mb-3" src="../../../assets/auth-logo.jpg" alt="" width="270" height="150">
       <h1 class="h3 mb-3 fw-normal">Registrate</h1>
 
-      <!-- <div class="form-floating">
-        <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
-        <label for="floatingInput">Correo</label>
-      </div>
-      <div class="form-floating">
-        <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
-        <label for="floatingPassword">Contraseña </label>
-      </div> -->
+
 
       <mat-form-field appearance="fill">
-        <mat-label>Correo</mat-label>
-        <input matInput placeholder="Ingresa tu correo" formControlName="correo">
+        <mat-label>Usuario</mat-label>
+        <input matInput placeholder="Ingresa tu correo" formControlName="username">
       </mat-form-field>
 
       <mat-form-field appearance="fill">
@@ -32,11 +25,12 @@
       </div>
 
       <button (click)="register()" class="button-login" mat-raised-button color="primary" [disabled]="!registerForm.valid">
-        Register
+        Registrar
       </button> 
-      <!-- <button style="background-color: #FF5A7C;border: #FF5A7C;" class="w-100 btn btn-lg btn-primary" type="submit">Register</button> -->
+      
       <p class="mt-5 mb-3 text-muted">&copy; 2021</p>
     </form>
+    <a href="/login">¿Ya tiene una cuenta?</a>
   </main>
 
 
